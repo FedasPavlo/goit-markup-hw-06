@@ -770,3 +770,446 @@ footer{
     display: flex;
     justify-content: center;
 }
+
+/*MOBILE*/
+
+.menu-svg{
+    fill: #2F2F37;
+    background-color: transparent;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        padding: 0;
+
+}
+
+.menu-svg:focus,
+.menu-svg:hover {
+    fill: #4D5AE5;
+    background-color: transparent;
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    background-color: #E5E5E5;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container-mob{
+    max-width: 280px;
+}
+
+.menu-bar-mob{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 72px;
+}
+
+.nav-bar-mob{
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    display: block;
+    position: relative;
+    color: #2E2F42;
+    
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-bar-mob:hover,
+.nav-bar-mob:focus {
+    color: #404bbf;
+}
+
+.address-mob{
+    margin-top: 168px;
+    margin-bottom: 48px;
+}
+
+.address-bar-mob{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-ul-mob{
+    display: flex;
+    gap: 40px;
+}
+
+.address-li-mob {
+    display: block;
+    letter-spacing: 0.02em;
+    color: #434455;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-li-mob:hover,
+.address-li-mob:focus {
+    color: #404bbf;
+}
+
+
+
+/*MOBILE FIRST*/
+
+@media (min-width: 320px) and (max-width:768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+        max-width: 320px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .header{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .header .container{
+        max-width: 768px;
+    }
+
+    .menu-bar,
+    .address{
+        display: none;
+    }
+
+    .nav{
+        padding: 16px 1px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .welcome{
+        max-height: 432px;
+        padding: 72px 0;
+        background-size: 100%;
+        background-image: linear-gradient(to bottom,
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/mobile-bg.jpg);
+    }
+
+    .effect{
+        font-size: 36px;
+        max-width: 216px;
+        margin: 0 52px 72px 52px;
+    }
+
+    .feature{
+        padding: 96px 0;
+    }
+
+    .feature-menu{
+        flex-direction: column;
+        gap: 72px;
+    }
+    .feature-card{
+        width: 100%;
+    }
+
+    .feature-svg{
+        display: none;
+    }
+
+    .title{
+        font-size: 36px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .desc{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0 16px;
+    }
+
+
+    .team{
+        padding: 96px 0;
+    }
+
+    .team-list{
+        flex-direction: column;
+        max-width: 264px;
+        margin: 0 auto;
+        gap: 72px;
+    }
+    
+    .team-card{
+        width: 100%;
+    }
+
+
+    .portfolio{
+        padding: 96px 0;
+    }
+
+    .portfolio-menu{
+        flex-direction: column;
+        padding: 0 16px;
+        gap: 48px;
+    }
+
+    .img-card{
+        max-width: 100%;
+    }
+
+    .portfolio-card{
+        width: 100%;
+    }
+
+
+    .footer{
+        padding: 96px 16px;
+    }
+
+    .footer .container{
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-desc{
+        margin: 0;
+    }
+
+    .logo-footer{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-sub{
+        margin: 0;
+    }
+
+    .social-media{
+        display: block;
+        justify-content: center;
+    }
+
+    .desc-footerr{
+        text-align: center;
+    }
+
+    .footer-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal{
+        max-width: 288px;
+        padding: 72px 16px 24px;
+    }
+
+    .form-label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .span-label{
+        min-width: 16px;
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1158px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    
+        max-width: 768px;
+        padding: 0;
+        margin: 0 auto;
+        }
+    
+    .header {
+
+        margin: 0 auto;
+        }
+    
+    .header .container {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        }
+    
+    .logo{
+        margin: 0;
+    }
+    
+    .menu-svg{
+        display: none;
+        }
+
+    .nav{
+        gap: 120px;
+    }
+
+    .address-bar{
+        display: inline-block;
+        flex-direction: column;
+        margin: 0;
+        gap: 12px;
+    }
+
+    .address-li{
+        padding: 0;
+    }
+
+    .welcome{
+        
+        max-height: 436px;
+        background-size: 100%;
+        background-image: linear-gradient(to bottom,
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/tab-bg.jpg);
+    }
+
+    .welcome .container{
+        margin-top: -75px;
+    }
+
+    .btn{
+        margin-top: 36px;
+    }
+
+    .effect{
+        max-width: 496px;
+        margin: 0 auto;
+    }
+
+    .feature-svg{
+            display: none;
+        }
+
+    .title{
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #2E2F42;
+        }
+
+    .feature-menu{
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-width: 736px;
+        }
+
+    .feature-card{
+            flex-basis: calc((100% - 24px) / 2);
+        }
+
+    .feature{
+        padding: 96px 0;
+    }
+
+    .team{
+        padding: 96px 0;
+    }
+
+    .team-list{
+         
+        flex-wrap: wrap;
+        gap: 64px 24px;
+        max-width: 768px;
+    }
+
+    .team-card{
+        margin: 0;
+        min-width: 264px;
+    }
+
+    .portfolio{
+        padding: 96px 0;
+        
+    }
+
+
+
+    .portfolio-menu{
+        flex-wrap: wrap;
+        gap: 72px 14px;
+        max-width: 736px;
+        margin: 0 auto;
+    }
+
+    .portfolio-card{
+        margin: 0;
+        min-width: 356px;
+    }
+
+    .footer{
+        padding: 96px 98px;
+    }
+
+    .footer .container{
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 72px 24px;
+
+            align-items: center;
+            margin: auto;
+            max-width: 768px;
+            padding: 0;
+    }
+
+    .footer-sub{
+        margin: 0;
+    }
+
+    .footer-desc{
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1159px){
+    .menu-svg{
+        display: none;
+    }
+}
