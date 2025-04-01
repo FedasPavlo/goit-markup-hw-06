@@ -20,7 +20,7 @@
 
     <!--HEADER-->
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
             <nav class="nav">
                 <a href="./index.html" class="logo">Web<span>Studio</span></a>
                 <ul class="menu-bar">
@@ -34,11 +34,6 @@
                         <a href="" class="nav-bar">Contacts</a>
                     </li>
                 </ul>
-                <button class="menu-svg">
-                    <svg width="36" height="32">
-                        <use href="./images/icons.svg#icon-menu"></use>
-                    </svg>
-                </button>
             </nav>
             <address class="address">
                 <ul class="address-bar">
@@ -50,19 +45,23 @@
                     </li>
                 </ul>
             </address>
-            
+            <button class="menu-btn" data-menu-open>
+                <svg width="24" height="24" class="menu-svg" >
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
             
         </div>
     </header>
 
-    <!--MAIN-->  
+    <!--MAIN-->
     <main>
 
         <!--SECTION Welcome-->
         <section class="welcome">
             <div class="container">
                 <h1 class="effect">Effective Solutions for Your Business</h1>
-                <button type="button" class="btn">Order Service</button>
+                <button type="button" class="btn" data-modal-open>Order Service</button>
             </div>
         </section>
 
@@ -277,13 +276,13 @@
                     <li class="portfolio-card">
                         <div class="img-card">
                             <picture>
-                                <source media="(min-width: 1158px)" srcset="./images/portfolio/portfolio-desc-1-min.jpg 1x, ./images/portfolio/portfolio-desc-1@2x-min.jpg 2x"  />
+                                <source srcset="./images/portfolio/portfolio-desc-1-min.jpg 1x, ./images/portfolio/portfolio-desc-1@2x-min.jpg 2x" media="(min-width: 1158px)" />
 
-                                <source media="(min-width: 768px)" srcset="./images/portfolio/portfolio-tab-1-min.jpg 1x, ./images/portfolio/portfolio-tab-1@2x-min.jpg 2x" />
+                                <source srcset="./images/portfolio/portfolio-tab-1-min.jpg 1x, ./images/portfolio/portfolio-tab-1@2x-min.jpg 2x" media="(min-width: 768px)"/>
 
-                                <source media="(max-width: 767px)" srcset="./images/portfolio/portfolio-mob-1-min.jpg 1x, ./images/portfolio/portfolio-mob-1@2x-min.jpg 2x" />
+                                <source srcset="./images/portfolio/portfolio-mob-1-min.jpg 1x, ./images/portfolio/portfolio-mob-1@2x-min.jpg 2x" media="(max-width: 767px)"/>
 
-                                <img src="./images/portfolio/portfolio-desc-1-min.jpg" alt="Banking App" width="360">
+                                <img src="./images/portfolio/portfolio-desc-1-min.jpg" alt="Banking App" width="360"/>
                             </picture>
                             
                             <p class="img-trans">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
@@ -459,9 +458,9 @@
     </footer>
 
     <!--MODAL-->
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
         <div class="modal">
-            <button type="button" class="btn-close">
+            <button type="button" class="btn-close" data-modal-close>
                 <svg class="modal-svg-close" width="8" height="8">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
@@ -523,9 +522,9 @@
     </div>
 
     <!--MOBILE-->
-    <div class="mobile-overlay">
+    <div class="mobile-overlay" data-menu>
         <div class="container-mob">
-            <button type="button" class="btn-close">
+            <button type="button" class="btn-close" data-menu-close>
                 <svg class="modal-svg-close" width="8" height="8">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
@@ -586,5 +585,7 @@
         </div>
     </div>
 
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
