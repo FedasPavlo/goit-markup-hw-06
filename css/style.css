@@ -32,7 +32,12 @@ li {
     margin: 0;
 }
 
-img,
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 svg {
     display: block;
 }
@@ -288,7 +293,7 @@ button{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
 }
 
 .btn-close {
@@ -331,6 +336,10 @@ button{
     margin-top: 72px;
 }
 
+.nav-mob{
+    margin-bottom: auto;
+}
+
 .nav-bar-mob {
     font-size: 36px;
     font-weight: 700;
@@ -349,7 +358,7 @@ button{
 }
 
 .address-mob {
-    margin-top: 168px;
+
     margin-bottom: 48px;
 }
 
@@ -434,6 +443,15 @@ button{
     background-position: center;
 }
 
+@media (min-resolution: 192dpi){
+    .welcome{
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/bg_mob@2x.jpg);
+    }
+}
+
 .effect {
     font-size: 36px;
     font-weight: 700;
@@ -509,6 +527,24 @@ button:focus {
 
     .btn {
         margin-top: 48px;
+    }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 768px) {
+    .welcome {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/bg_tab@2x.jpg);
+    }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 1158px) {
+    .welcome {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/bg_desk@2x.jpg);
     }
 }
 
@@ -743,8 +779,6 @@ button:focus {
 .img-card {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    height: 280px;
 }
 
 .img-trans {
